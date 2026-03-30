@@ -1,0 +1,11 @@
+cd "/Users/roberthartinger/Partnership Alert"
+# include the latest edit to the workflow file
+git add .github/workflows/weekly-brief.yml
+# (optional but recommended) stop tracking generated output
+echo "out/" >> .gitignore
+git rm -r --cached out/ 2>/dev/null || true
+git add .gitignore
+# create your first commit
+git commit -m "Add Executive Partner Brief automation"
+# push to GitHub
+git push -u origin main
