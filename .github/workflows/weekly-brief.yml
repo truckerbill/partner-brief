@@ -1,11 +1,32 @@
-cd "/Users/roberthartinger/Partnership Alert"
-# include the latest edit to the workflow file
-git add .github/workflows/weekly-brief.yml
-# (optional but recommended) stop tracking generated output
-echo "out/" >> .gitignore
-git rm -r --cached out/ 2>/dev/null || true
-git add .gitignore
-# create your first commit
-git commit -m "Add Executive Partner Brief automation"
-# push to GitHub
-git push -u origin main
+name: Executive Partner Brief
+on:
+  schedule:
+    # Mondays at 09:00 CET (which is 08:00 UTC)
+    - cron: "0 8 * * 1"
+  workflow_dispatch: {}
+jobs:
+  build_and_send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build brief HTML
+        env:
+          BRIEF_TITLE: Executive Partner Brief
+          BRIEF_DAYS: "7"
+          BRIEF_OUT: out/executive_partner_brief.html
+          BRIEF_DEBUG_JSON: out/executive_partner_brief.items.json
+        run: python scripts/build_brief.py
+      - name: Send email via Apps Script
+        env:
+          BRIEF_OUT: out/executive_partner_brief.html
+          BRIEF_APPS_SCRIPT_URL: ${{ secrets.BRIEF_APPS_SCRIPT_URL }}
+          BRIEF_SHARED_SECRET: ${{ secrets.BRIEF_SHARED_SECRET }}
+          BRIEF_EMAIL_TO: ${{ secrets.BRIEF_EMAIL_TO }}
+          BRIEF_EMAIL_SUBJECT: Executive Partner Brief (weekly)
+        run: python scripts/send_brief.py
