@@ -1,0 +1,160 @@
+{
+  "partners": [
+    {
+      "name": "SAP SuccessFactors",
+      "queries": [
+        "SAP SuccessFactors",
+        "\"SuccessFactors\" SAP"
+      ]
+    },
+    {
+      "name": "Workday",
+      "queries": [
+        "Workday HCM",
+        "Workday Recruiting"
+      ]
+    },
+    {
+      "name": "SmartRecruiters",
+      "queries": [
+        "SmartRecruiters"
+      ]
+    },
+    {
+      "name": "iCIMS",
+      "queries": [
+        "iCIMS",
+        "\"iCIMS\" recruiting"
+      ]
+    },
+    {
+      "name": "Avature",
+      "queries": [
+        "Avature",
+        "\"Avature\" recruiting"
+      ]
+    },
+    {
+      "name": "Paradox",
+      "queries": [
+        "Paradox Olivia recruiting",
+        "Paradox AI recruiting"
+      ]
+    },
+    {
+      "name": "Eightfold",
+      "queries": [
+        "Eightfold AI talent",
+        "Eightfold AI"
+      ]
+    },
+    {
+      "name": "Phenom",
+      "queries": [
+        "Phenom talent experience",
+        "Phenom TXM"
+      ]
+    }
+  ],
+  "regions": {
+    "us_terms": [
+      "United States",
+      "US",
+      "U.S.",
+      "USA",
+      "North America"
+    ],
+    "eu_terms": [
+      "Europe",
+      "European",
+      "EU",
+      "EMEA",
+      "UK",
+      "United Kingdom",
+      "Germany",
+      "France",
+      "Netherlands",
+      "Ireland",
+      "Spain",
+      "Italy",
+      "Sweden",
+      "Denmark",
+      "Norway",
+      "Finland",
+      "Switzerland",
+      "Austria",
+      "Belgium",
+      "Poland"
+    ]
+  },
+  "topic_keywords": {
+    "LeadershipChange": [
+      "appoint",
+      "appointed",
+      "names",
+      "named",
+      "hire",
+      "hired",
+      "joins as",
+      "chief executive",
+      "CEO",
+      "CFO",
+      "COO",
+      "CTO",
+      "CPO",
+      "CHRO",
+      "president",
+      "board",
+      "director",
+      "resigns",
+      "steps down",
+      "succession"
+    ],
+    "ProductLaunch": [
+      "launch",
+      "launches",
+      "released",
+      "release",
+      "introduces",
+      "introducing",
+      "unveils",
+      "new product",
+      "new feature",
+      "availability",
+      "generally available",
+      "GA",
+      "roadmap",
+      "update"
+    ],
+    "FundingOrMA": [
+      "acquire",
+      "acquires",
+      "acquisition",
+      "merger",
+      "merge",
+      "buy",
+      "buys",
+      "investment",
+      "raise",
+      "raises",
+      "funding",
+      "series",
+      "strategic investment",
+      "private equity"
+    ],
+    "MajorNews": [
+      "partner",
+      "partnership",
+      "collaboration",
+      "integration",
+      "customer",
+      "contract",
+      "award",
+      "lawsuit",
+      "security",
+      "breach",
+      "investigation",
+      "restructuring"
+    ]
+  }
+}
